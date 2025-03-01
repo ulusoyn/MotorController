@@ -9,8 +9,8 @@ Note: I don't know why the topic name contains unstamped and the message interfa
 The node takes linear_x and angular_y components of the twist message and converts it to the wheel velocities by:
 
 ```
-    double right_wheel_speed = (linear_x + (angular_z * wheel_base_ / 2.0));
-    double left_wheel_speed = (linear_x - (angular_z * wheel_base_ / 2.0));
+double right_wheel_speed = (linear_x + (angular_z * wheel_base_ / 2.0));
+double left_wheel_speed = (linear_x - (angular_z * wheel_base_ / 2.0));
 ```
 
 This is very basic kinematics (not sure if it's working exactly with my robot), it just takes desired angular and linear velocities and sends this values to the microcontroller by sendToMicroController() method. 
